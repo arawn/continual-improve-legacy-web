@@ -55,3 +55,4 @@
 현대적 웹 애플리케이션은 `/order.jsp` 요청에 대해 Vue.js로 작성된 애플리케이션으로 응답하고, 그외 요청(`/index.jsp, /support.jsp`)은 레거시 웹 애플리케이션에게 전달한다. Vue.js로 작성된 `/order.jsp`에서는 API 호출 후 console.log 를 통해 출력하는 기능이 구현되어 있다.
 
 
+`점진적인 레거시 웹 애플리케이션 개선 과정`에 대한 전체 이야기는 첨부된 [Presentation](continual-improve-legacy-web.pdf) 에서 볼 수 있다.
