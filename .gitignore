@@ -1,0 +1,10 @@
+generated
+build
+out
+.idea
+.gradle
+.boot
+
+# etc
+.DS_Store
+*.iml

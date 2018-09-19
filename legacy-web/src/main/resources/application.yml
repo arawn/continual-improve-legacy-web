@@ -1,0 +1,11 @@
+server.port: 9000
+
+spring.mvc.favicon.enabled: false
+
+logging:
+  level:
+    legacy: DEBUG
+    org.springframework:
+      boot: INFO
+      cloud: DEBUG
+      web: DEBUG

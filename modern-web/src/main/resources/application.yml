@@ -1,0 +1,44 @@
+server.port: 9100
+
+zuul:
+  sensitiveHeaders:
+  routes:
+    legacy_web_entry_point:
+      path: /**
+      serviceId: service-legacy
+      stripPrefix: false
+
+ribbon:
+  eureka:
+    enabled: false
+  eager-load:
+    enabled: true
+
+hystrix:
+  command.service-legacy.execution.isolation.thread.timeoutInMilliseconds: 5250
+
+service-legacy:
+  ribbon:
+    listOfServers: localhost:9000
+    IsSecure: false
+    ConnectTimeout: 500
+    ReadTimeout: 5000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100
+
+spring:
+  mvc:
+    favicon.enabled: false
+  resources:
+    addMappings: false
+  thymeleaf:
+    mode: LEGACYHTML5
+
+logging:
+  level:
+    modern: DEBUG
+    org.springframework:
+      boot: INFO
+      cloud: DEBUG
+      web: DEBUG
+    org.thymeleaf: DEBUG

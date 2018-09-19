@@ -1,0 +1,3 @@
+rootProject.name = 'continual-improve-legacy-web'
+
+include 'legacy-web', 'modern-web'
